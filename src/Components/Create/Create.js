@@ -4,6 +4,7 @@ import Header from '../Header/Header';
 import { FirebaseContext, AuthContext } from '../../store/Context';
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 
+// This function is used to add a sell
 
 const Create = () => {
 

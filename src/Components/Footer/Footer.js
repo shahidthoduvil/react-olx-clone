@@ -2,6 +2,8 @@ import React from 'react';
 
 import './Footer.css';
 
+// footer of the page
+
 function Footer() {
   return (
     <div className="footerParentDiv">

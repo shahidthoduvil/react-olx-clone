@@ -5,6 +5,7 @@ import { PostContext } from '../../store/PostContext';
 
 import Heart from '../../assets/Heart';
 import './Post.css';
+// user can view the post 
 
 function Posts() {
 

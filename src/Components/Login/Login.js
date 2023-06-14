@@ -4,6 +4,7 @@ import './Login.css';
 import { FirebaseContext } from '../../store/Context';
 import { useHistory } from 'react-router-dom/cjs/react-router-dom';
 
+// login of the page
 function Login() {
   const history=useHistory()
   const [email,setEmail]=useState('')

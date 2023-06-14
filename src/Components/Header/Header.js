@@ -8,6 +8,8 @@ import SellButton from '../../assets/SellButton';
 import SellButtonPlus from '../../assets/SellButtonPlus';
 import { AuthContext, FirebaseContext } from '../../store/Context';
 
+// header of the page
+
 function Header() {
   
   const {firebase}=useContext(FirebaseContext)

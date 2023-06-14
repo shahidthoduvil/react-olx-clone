@@ -3,14 +3,23 @@ import React,{useEffect,useState,useContext} from 'react';
 import './View.css';
 import { PostContext } from '../../store/PostContext';
 import { FirebaseContext } from '../../store/Context';
+
+// user can read the detail about the page
 function View() {
-  const [userDetails,setUserDetails]=useState()
+  const [userDetails,setUserDetails]=useState('')
   const {postDetails}=useContext(PostContext)
   const {firebase}=useContext(FirebaseContext)
 
 
   useEffect(()=>{
- 
+
+    const userId = ''
+    try{
+      const{userId}=postDetails
+    }
+    catch{
+
+    }
    
     firebase.firestore().collection('users').where('id','==','userId').get().then((res)=>{
       res.forEach(doc=>{
@@ -23,13 +32,13 @@ function View() {
     <div className="viewParentDiv">
       <div className="imageShowDiv">
         <img
-          src={postDetails.url}
+          src={postDetails?.url}
           alt=""
         />
       </div>
       <div className="rightSection">
         <div className="productDetails">
-          <p>&#x20B9; {postDetails.price} </p>
+          <p>&#x20B9; {postDetails?.price} </p>
           <span>YAMAHA R15V3</span>
           <p>Two Wheeler</p>
           <span>Tue May 04 2021</span>
